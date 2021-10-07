@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RRHHECU911Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tbl_CargoInstitucional">
+          <Key>
+            <PropertyRef Name="CargoIntsi_id" />
+          </Key>
+          <Property Name="CargoIntsi_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CargoInsti_nom" Type="varchar" MaxLength="100" />
+          <Property Name="CargoInsti_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_CorreoIntitucional">
+          <Key>
+            <PropertyRef Name="CorreoInts_id" />
+          </Key>
+          <Property Name="CorreoInts_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CorreoInts_nom" Type="varchar" MaxLength="100" />
+          <Property Name="CorreoInst_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_DireccionInstitucional">
+          <Key>
+            <PropertyRef Name="DirInsti_Id" />
+          </Key>
+          <Property Name="DirInsti_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DirInsti_nom" Type="varchar" MaxLength="100" />
+          <Property Name="DirInsti_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Discapacidad">
+          <Key>
+            <PropertyRef Name="Dis_id" />
+          </Key>
+          <Property Name="Dis_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dis_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Dis_estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Emp_Per">
+          <Key>
+            <PropertyRef Name="EmpPer_id" />
+          </Key>
+          <Property Name="EmpPer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Emp_id" Type="int" />
+          <Property Name="Per_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Tbl_Empresa">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Emp_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Emp_ruc" Type="int" />
+          <Property Name="Emp_ciiu" Type="int" />
+          <Property Name="Emp_estabSalud" Type="varchar" MaxLength="100" />
+          <Property Name="Emp_estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_EstrcuturaUno">
+          <Key>
+            <PropertyRef Name="EstructuraUno_id" />
+          </Key>
+          <Property Name="EstructuraUno_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EstructuraUno_nom" Type="varchar" MaxLength="100" />
+          <Property Name="EstructuraUno_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_EstructuraDos">
+          <Key>
+            <PropertyRef Name="EstructuraDos_id" />
+          </Key>
+          <Property Name="EstructuraDos_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EstructuraDos_nom" Type="varchar" MaxLength="100" />
+          <Property Name="EstructuraDos_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_EstructuraProgramatica">
+          <Key>
+            <PropertyRef Name="EstrucProgra_id" />
+          </Key>
+          <Property Name="EstrucProgra_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EstrucProgra_nom" Type="varchar" MaxLength="100" />
+          <Property Name="EstrucProgra_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Grado">
+          <Key>
+            <PropertyRef Name="Grado_id" />
+          </Key>
+          <Property Name="Grado_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Grado_Per" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Tbl_GrupoEtnico">
+          <Key>
+            <PropertyRef Name="GrupoEtni_id" />
+          </Key>
+          <Property Name="GrupoEtni_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GrupoEtni_nom" Type="varchar" MaxLength="100" />
+          <Property Name="GrupoEtni_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_GrupoOcupacional">
+          <Key>
+            <PropertyRef Name="GrpOcupacional_id" />
+          </Key>
+          <Property Name="GrpOcupacional_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GrpOcupacional_nom" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Tbl_Identidad_de_Genero">
+          <Key>
+            <PropertyRef Name="IdtGen_id" />
+          </Key>
+          <Property Name="IdtGen_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdtGen_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="IdtGen_estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Inicial">
+          <Key>
+            <PropertyRef Name="inicial_id" />
+          </Key>
+          <Property Name="inicial_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="inicial_edad" Type="int" />
+          <Property Name="inicial_NumArchivo" Type="varchar" MaxLength="100" />
+          <Property Name="Rel_id" Type="int" />
+          <Property Name="inicial_groSanguineo" Type="varchar" MaxLength="100" />
+          <Property Name="inicial_lateralidad" Type="varchar" MaxLength="100" />
+          <Property Name="OrSex_id" Type="int" />
+          <Property Name="IdtGen_id" Type="int" />
+          <Property Name="Dis_id" Type="int" />
+          <Property Name="inicial_fechIngTrabajo" Type="varchar" MaxLength="1" />
+          <Property Name="inicial_fechSalida" Type="date" />
+          <Property Name="inicial_tiempo" Type="int" />
+          <Property Name="inicial_puesTrabajo" Type="varchar" MaxLength="1" />
+          <Property Name="inicial_Actividades" Type="varchar" MaxLength="250" />
+          <Property Name="inicial_facRiesgo" Type="text" />
+          <Property Name="inicial_areaTrabajo" Type="varchar" MaxLength="1" />
+          <Property Name="inicial_actsRelevantes" Type="varchar" MaxLength="255" />
+          <Property Name="Act_id" Type="int" />
+          <Property Name="FacR_id" Type="int" />
+          <Property Name="inicial_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_ModalidadLaboral">
+          <Key>
+            <PropertyRef Name="Per_modLaboral_id" />
+          </Key>
+          <Property Name="Per_modLaboral_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Per_modLaboral_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Per_modLaboral_Estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_OrientacionSexual">
+          <Key>
+            <PropertyRef Name="OrSex_id" />
+          </Key>
+          <Property Name="OrSex_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrSex_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="OrSex_estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Personas">
+          <Key>
+            <PropertyRef Name="Per_id" />
+          </Key>
+          <Property Name="Per_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Per_Cedula" Type="int" />
+          <Property Name="Per_priNombre" Type="varchar" MaxLength="100" />
+          <Property Name="Per_segNombre" Type="varchar" MaxLength="100" />
+          <Property Name="Per_priApellido" Type="varchar" MaxLength="100" />
+          <Property Name="Per_segApellido" Type="varchar" MaxLength="100" />
+          <Property Name="Per_fechNacimiento" Type="datetime" />
+          <Property Name="Zona_id" Type="int" />
+          <Property Name="DirInsti_Id" Type="int" />
+          <Property Name="Sede_id" Type="int" />
+          <Property Name="ProcesoInt_id" Type="int" />
+          <Property Name="EstrucProgra_id" Type="int" />
+          <Property Name="Per_fechInicio" Type="datetime" />
+          <Property Name="Per_fechDesde" Type="datetime" />
+          <Property Name="Per_fechHasta" Type="datetime" />
+          <Property Name="EstructuraUno_id" Type="int" />
+          <Property Name="EstructuraDos_id" Type="int" />
+          <Property Name="Rmu_id" Type="int" />
+          <Property Name="Grado_id" Type="int" />
+          <Property Name="GrpOcupacional_id" Type="int" />
+          <Property Name="CargoInsti_id" Type="int" />
+          <Property Name="GrupoEtni_id" Type="int" />
+          <Property Name="Per_modLaboral_id" Type="int" />
+          <Property Name="Per_numContrato" Type="varchar" MaxLength="150" />
+          <Property Name="Per_partiGeneral" Type="int" />
+          <Property Name="Per_partiIndividual" Type="int" />
+          <Property Name="Per_genero" Type="varchar" MaxLength="1" />
+          <Property Name="Per_discapacidad" Type="varchar" MaxLength="100" />
+          <Property Name="Per_motivoSalida" Type="varchar" MaxLength="100" />
+          <Property Name="CorreoInts_id" Type="int" />
+          <Property Name="TelfInts_id" Type="int" />
+          <Property Name="Per_numCelular" Type="int" />
+          <Property Name="Per_dirDomicilio" Type="varchar" MaxLength="100" />
+          <Property Name="Per_correoPersonal" Type="varchar" MaxLength="100" />
+          <Property Name="Per_instrucFormal" Type="varchar" MaxLength="100" />
+          <Property Name="Per_añosExperiencia" Type="datetime" />
+          <Property Name="Per_comServicios" Type="varchar" MaxLength="25" />
+          <Property Name="Per_oriDesComision" Type="varchar" MaxLength="50" />
+          <Property Name="Per_fechComiDesde" Type="datetime" />
+          <Property Name="Per_fechComiHasta" Type="datetime" />
+          <Property Name="Per_nomPerContacEmergencia" Type="varchar" MaxLength="100" />
+          <Property Name="Per_numPerContacEmergencia" Type="varchar" MaxLength="100" />
+          <Property Name="Per_observaciones" Type="text" />
+          <Property Name="inicial_id" Type="int" />
+          <Property Name="Per_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_ProcesoInterno">
+          <Key>
+            <PropertyRef Name="ProcesoInt_id" />
+          </Key>
+          <Property Name="ProcesoInt_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProcesoInt_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="ProcesoInt_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Religion">
+          <Key>
+            <PropertyRef Name="Rel_id" />
+          </Key>
+          <Property Name="Rel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rel_nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Rel_estado" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Rmu">
+          <Key>
+            <PropertyRef Name="Rmu_id" />
+          </Key>
+          <Property Name="Rmu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Rmu_val" Type="float" />
+          <Property Name="Rmu_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Sede">
+          <Key>
+            <PropertyRef Name="Sede_id" />
+          </Key>
+          <Property Name="Sede_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sede_nom" Type="varchar" MaxLength="100" />
+          <Property Name="Sede_Estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_TelefonoIntitucional">
+          <Key>
+            <PropertyRef Name="TelfInts_id" />
+          </Key>
+          <Property Name="TelfInts_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TelfInts_num" Type="int" />
+          <Property Name="TelfInts_exten" Type="int" />
+          <Property Name="TelfInst_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tbl_Zona">
+          <Key>
+            <PropertyRef Name="Zona_id" />
+          </Key>
+          <Property Name="Zona_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Zona_nom" Type="varchar" MaxLength="50" />
+          <Property Name="Zona_estado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_Tbl_Emp_Per_Emp_id">
+          <End Role="Tbl_Empresa" Type="Self.Tbl_Empresa" Multiplicity="0..1" />
+          <End Role="Tbl_Emp_Per" Type="Self.Tbl_Emp_Per" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Empresa">
+              <PropertyRef Name="Emp_id" />
+            </Principal>
+            <Dependent Role="Tbl_Emp_Per">
+              <PropertyRef Name="Emp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Emp_Per_Per_id">
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="0..1" />
+          <End Role="Tbl_Emp_Per" Type="Self.Tbl_Emp_Per" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Inicial">
+              <PropertyRef Name="inicial_id" />
+            </Principal>
+            <Dependent Role="Tbl_Emp_Per">
+              <PropertyRef Name="Per_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_Dis_id">
+          <End Role="Tbl_Discapacidad" Type="Self.Tbl_Discapacidad" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Discapacidad">
+              <PropertyRef Name="Dis_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="Dis_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_IdtGen_id">
+          <End Role="Tbl_Identidad_de_Genero" Type="Self.Tbl_Identidad_de_Genero" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Identidad_de_Genero">
+              <PropertyRef Name="IdtGen_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="IdtGen_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_OrSex_id">
+          <End Role="Tbl_OrientacionSexual" Type="Self.Tbl_OrientacionSexual" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_OrientacionSexual">
+              <PropertyRef Name="OrSex_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="OrSex_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_Rel_id">
+          <End Role="Tbl_Religion" Type="Self.Tbl_Religion" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Religion">
+              <PropertyRef Name="Rel_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="Rel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_CargoInsti_id">
+          <End Role="Tbl_CargoInstitucional" Type="Self.Tbl_CargoInstitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_CargoInstitucional">
+              <PropertyRef Name="CargoIntsi_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="CargoInsti_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_CorreoInts_id">
+          <End Role="Tbl_CorreoIntitucional" Type="Self.Tbl_CorreoIntitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_CorreoIntitucional">
+              <PropertyRef Name="CorreoInts_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="CorreoInts_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_DirInsti_Id">
+          <End Role="Tbl_DireccionInstitucional" Type="Self.Tbl_DireccionInstitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_DireccionInstitucional">
+              <PropertyRef Name="DirInsti_Id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="DirInsti_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstrucProgra_id">
+          <End Role="Tbl_EstructuraProgramatica" Type="Self.Tbl_EstructuraProgramatica" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstructuraProgramatica">
+              <PropertyRef Name="EstrucProgra_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstrucProgra_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstructuraDos_id">
+          <End Role="Tbl_EstructuraDos" Type="Self.Tbl_EstructuraDos" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstructuraDos">
+              <PropertyRef Name="EstructuraDos_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstructuraDos_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstructuraUno_id">
+          <End Role="Tbl_EstrcuturaUno" Type="Self.Tbl_EstrcuturaUno" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstrcuturaUno">
+              <PropertyRef Name="EstructuraUno_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstructuraUno_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Grado_id">
+          <End Role="Tbl_Grado" Type="Self.Tbl_Grado" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Grado">
+              <PropertyRef Name="Grado_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Grado_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_GrpOcupacional_id">
+          <End Role="Tbl_GrupoOcupacional" Type="Self.Tbl_GrupoOcupacional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_GrupoOcupacional">
+              <PropertyRef Name="GrpOcupacional_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="GrpOcupacional_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_GrupoEtni_id">
+          <End Role="Tbl_GrupoEtnico" Type="Self.Tbl_GrupoEtnico" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_GrupoEtnico">
+              <PropertyRef Name="GrupoEtni_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="GrupoEtni_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_inicial_id">
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Inicial">
+              <PropertyRef Name="inicial_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="inicial_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Per_modLaboral_id">
+          <End Role="Tbl_ModalidadLaboral" Type="Self.Tbl_ModalidadLaboral" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_ModalidadLaboral">
+              <PropertyRef Name="Per_modLaboral_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Per_modLaboral_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_ProcesoInt_id">
+          <End Role="Tbl_ProcesoInterno" Type="Self.Tbl_ProcesoInterno" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_ProcesoInterno">
+              <PropertyRef Name="ProcesoInt_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="ProcesoInt_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Rmu_id">
+          <End Role="Tbl_Rmu" Type="Self.Tbl_Rmu" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Rmu">
+              <PropertyRef Name="Rmu_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Rmu_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Sede_id">
+          <End Role="Tbl_Sede" Type="Self.Tbl_Sede" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Sede">
+              <PropertyRef Name="Sede_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Sede_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_TelfInts_id">
+          <End Role="Tbl_TelefonoIntitucional" Type="Self.Tbl_TelefonoIntitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_TelefonoIntitucional">
+              <PropertyRef Name="TelfInts_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="TelfInts_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Zona_id">
+          <End Role="Tbl_Zona" Type="Self.Tbl_Zona" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Zona">
+              <PropertyRef Name="Zona_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Zona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RRHHECU911ModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_CargoInstitucional" EntityType="Self.Tbl_CargoInstitucional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_CorreoIntitucional" EntityType="Self.Tbl_CorreoIntitucional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_DireccionInstitucional" EntityType="Self.Tbl_DireccionInstitucional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Discapacidad" EntityType="Self.Tbl_Discapacidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Emp_Per" EntityType="Self.Tbl_Emp_Per" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Empresa" EntityType="Self.Tbl_Empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_EstrcuturaUno" EntityType="Self.Tbl_EstrcuturaUno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_EstructuraDos" EntityType="Self.Tbl_EstructuraDos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_EstructuraProgramatica" EntityType="Self.Tbl_EstructuraProgramatica" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Grado" EntityType="Self.Tbl_Grado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_GrupoEtnico" EntityType="Self.Tbl_GrupoEtnico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_GrupoOcupacional" EntityType="Self.Tbl_GrupoOcupacional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Identidad_de_Genero" EntityType="Self.Tbl_Identidad_de_Genero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Inicial" EntityType="Self.Tbl_Inicial" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_ModalidadLaboral" EntityType="Self.Tbl_ModalidadLaboral" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_OrientacionSexual" EntityType="Self.Tbl_OrientacionSexual" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Personas" EntityType="Self.Tbl_Personas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_ProcesoInterno" EntityType="Self.Tbl_ProcesoInterno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Religion" EntityType="Self.Tbl_Religion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Rmu" EntityType="Self.Tbl_Rmu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Sede" EntityType="Self.Tbl_Sede" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_TelefonoIntitucional" EntityType="Self.Tbl_TelefonoIntitucional" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Zona" EntityType="Self.Tbl_Zona" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Tbl_Emp_Per_Emp_id" Association="Self.FK_Tbl_Emp_Per_Emp_id">
+            <End Role="Tbl_Empresa" EntitySet="Tbl_Empresa" />
+            <End Role="Tbl_Emp_Per" EntitySet="Tbl_Emp_Per" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Emp_Per_Per_id" Association="Self.FK_Tbl_Emp_Per_Per_id">
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+            <End Role="Tbl_Emp_Per" EntitySet="Tbl_Emp_Per" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_Dis_id" Association="Self.FK_Tbl_Inicial_Dis_id">
+            <End Role="Tbl_Discapacidad" EntitySet="Tbl_Discapacidad" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_IdtGen_id" Association="Self.FK_Tbl_Inicial_IdtGen_id">
+            <End Role="Tbl_Identidad_de_Genero" EntitySet="Tbl_Identidad_de_Genero" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_OrSex_id" Association="Self.FK_Tbl_Inicial_OrSex_id">
+            <End Role="Tbl_OrientacionSexual" EntitySet="Tbl_OrientacionSexual" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_Rel_id" Association="Self.FK_Tbl_Inicial_Rel_id">
+            <End Role="Tbl_Religion" EntitySet="Tbl_Religion" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_CargoInsti_id" Association="Self.FK_Tbl_Personas_CargoInsti_id">
+            <End Role="Tbl_CargoInstitucional" EntitySet="Tbl_CargoInstitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_CorreoInts_id" Association="Self.FK_Tbl_Personas_CorreoInts_id">
+            <End Role="Tbl_CorreoIntitucional" EntitySet="Tbl_CorreoIntitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_DirInsti_Id" Association="Self.FK_Tbl_Personas_DirInsti_Id">
+            <End Role="Tbl_DireccionInstitucional" EntitySet="Tbl_DireccionInstitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstrucProgra_id" Association="Self.FK_Tbl_Personas_EstrucProgra_id">
+            <End Role="Tbl_EstructuraProgramatica" EntitySet="Tbl_EstructuraProgramatica" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstructuraDos_id" Association="Self.FK_Tbl_Personas_EstructuraDos_id">
+            <End Role="Tbl_EstructuraDos" EntitySet="Tbl_EstructuraDos" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstructuraUno_id" Association="Self.FK_Tbl_Personas_EstructuraUno_id">
+            <End Role="Tbl_EstrcuturaUno" EntitySet="Tbl_EstrcuturaUno" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Grado_id" Association="Self.FK_Tbl_Personas_Grado_id">
+            <End Role="Tbl_Grado" EntitySet="Tbl_Grado" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_GrpOcupacional_id" Association="Self.FK_Tbl_Personas_GrpOcupacional_id">
+            <End Role="Tbl_GrupoOcupacional" EntitySet="Tbl_GrupoOcupacional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_GrupoEtni_id" Association="Self.FK_Tbl_Personas_GrupoEtni_id">
+            <End Role="Tbl_GrupoEtnico" EntitySet="Tbl_GrupoEtnico" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_inicial_id" Association="Self.FK_Tbl_Personas_inicial_id">
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Per_modLaboral_id" Association="Self.FK_Tbl_Personas_Per_modLaboral_id">
+            <End Role="Tbl_ModalidadLaboral" EntitySet="Tbl_ModalidadLaboral" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_ProcesoInt_id" Association="Self.FK_Tbl_Personas_ProcesoInt_id">
+            <End Role="Tbl_ProcesoInterno" EntitySet="Tbl_ProcesoInterno" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Rmu_id" Association="Self.FK_Tbl_Personas_Rmu_id">
+            <End Role="Tbl_Rmu" EntitySet="Tbl_Rmu" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Sede_id" Association="Self.FK_Tbl_Personas_Sede_id">
+            <End Role="Tbl_Sede" EntitySet="Tbl_Sede" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_TelfInts_id" Association="Self.FK_Tbl_Personas_TelfInts_id">
+            <End Role="Tbl_TelefonoIntitucional" EntitySet="Tbl_TelefonoIntitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Zona_id" Association="Self.FK_Tbl_Personas_Zona_id">
+            <End Role="Tbl_Zona" EntitySet="Tbl_Zona" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RRHHECU911Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tbl_CargoInstitucional">
+          <Key>
+            <PropertyRef Name="CargoIntsi_id" />
+          </Key>
+          <Property Name="CargoIntsi_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CargoInsti_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CargoInsti_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_CargoInsti_id" FromRole="Tbl_CargoInstitucional" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_CorreoIntitucional">
+          <Key>
+            <PropertyRef Name="CorreoInts_id" />
+          </Key>
+          <Property Name="CorreoInts_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CorreoInts_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CorreoInst_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_CorreoInts_id" FromRole="Tbl_CorreoIntitucional" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_DireccionInstitucional">
+          <Key>
+            <PropertyRef Name="DirInsti_Id" />
+          </Key>
+          <Property Name="DirInsti_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DirInsti_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DirInsti_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_DirInsti_Id" FromRole="Tbl_DireccionInstitucional" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Discapacidad">
+          <Key>
+            <PropertyRef Name="Dis_id" />
+          </Key>
+          <Property Name="Dis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dis_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Dis_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Inicial_Dis_id" FromRole="Tbl_Discapacidad" ToRole="Tbl_Inicial" />
+        </EntityType>
+        <EntityType Name="Tbl_Emp_Per">
+          <Key>
+            <PropertyRef Name="EmpPer_id" />
+          </Key>
+          <Property Name="EmpPer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_id" Type="Int32" />
+          <Property Name="Per_id" Type="Int32" />
+          <NavigationProperty Name="Tbl_Empresa" Relationship="Self.FK_Tbl_Emp_Per_Emp_id" FromRole="Tbl_Emp_Per" ToRole="Tbl_Empresa" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Emp_Per_Per_id" FromRole="Tbl_Emp_Per" ToRole="Tbl_Inicial" />
+        </EntityType>
+        <EntityType Name="Tbl_Empresa">
+          <Key>
+            <PropertyRef Name="Emp_id" />
+          </Key>
+          <Property Name="Emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Emp_ruc" Type="Int32" />
+          <Property Name="Emp_ciiu" Type="Int32" />
+          <Property Name="Emp_estabSalud" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Emp_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Emp_Per" Relationship="Self.FK_Tbl_Emp_Per_Emp_id" FromRole="Tbl_Empresa" ToRole="Tbl_Emp_Per" />
+        </EntityType>
+        <EntityType Name="Tbl_EstrcuturaUno">
+          <Key>
+            <PropertyRef Name="EstructuraUno_id" />
+          </Key>
+          <Property Name="EstructuraUno_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EstructuraUno_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EstructuraUno_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_EstructuraUno_id" FromRole="Tbl_EstrcuturaUno" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_EstructuraDos">
+          <Key>
+            <PropertyRef Name="EstructuraDos_id" />
+          </Key>
+          <Property Name="EstructuraDos_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EstructuraDos_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EstructuraDos_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_EstructuraDos_id" FromRole="Tbl_EstructuraDos" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_EstructuraProgramatica">
+          <Key>
+            <PropertyRef Name="EstrucProgra_id" />
+          </Key>
+          <Property Name="EstrucProgra_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EstrucProgra_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EstrucProgra_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_EstrucProgra_id" FromRole="Tbl_EstructuraProgramatica" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Grado">
+          <Key>
+            <PropertyRef Name="Grado_id" />
+          </Key>
+          <Property Name="Grado_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Grado_Per" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_Grado_id" FromRole="Tbl_Grado" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_GrupoEtnico">
+          <Key>
+            <PropertyRef Name="GrupoEtni_id" />
+          </Key>
+          <Property Name="GrupoEtni_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GrupoEtni_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GrupoEtni_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_GrupoEtni_id" FromRole="Tbl_GrupoEtnico" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_GrupoOcupacional">
+          <Key>
+            <PropertyRef Name="GrpOcupacional_id" />
+          </Key>
+          <Property Name="GrpOcupacional_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GrpOcupacional_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_GrpOcupacional_id" FromRole="Tbl_GrupoOcupacional" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Identidad_de_Genero">
+          <Key>
+            <PropertyRef Name="IdtGen_id" />
+          </Key>
+          <Property Name="IdtGen_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdtGen_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdtGen_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Inicial_IdtGen_id" FromRole="Tbl_Identidad_de_Genero" ToRole="Tbl_Inicial" />
+        </EntityType>
+        <EntityType Name="Tbl_Inicial">
+          <Key>
+            <PropertyRef Name="inicial_id" />
+          </Key>
+          <Property Name="inicial_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="inicial_edad" Type="Int32" />
+          <Property Name="inicial_NumArchivo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Rel_id" Type="Int32" />
+          <Property Name="inicial_groSanguineo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_lateralidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OrSex_id" Type="Int32" />
+          <Property Name="IdtGen_id" Type="Int32" />
+          <Property Name="Dis_id" Type="Int32" />
+          <Property Name="inicial_fechIngTrabajo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_fechSalida" Type="DateTime" Precision="0" />
+          <Property Name="inicial_tiempo" Type="Int32" />
+          <Property Name="inicial_puesTrabajo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_Actividades" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_facRiesgo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_areaTrabajo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_actsRelevantes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Act_id" Type="Int32" />
+          <Property Name="FacR_id" Type="Int32" />
+          <Property Name="inicial_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Discapacidad" Relationship="Self.FK_Tbl_Inicial_Dis_id" FromRole="Tbl_Inicial" ToRole="Tbl_Discapacidad" />
+          <NavigationProperty Name="Tbl_Emp_Per" Relationship="Self.FK_Tbl_Emp_Per_Per_id" FromRole="Tbl_Inicial" ToRole="Tbl_Emp_Per" />
+          <NavigationProperty Name="Tbl_Identidad_de_Genero" Relationship="Self.FK_Tbl_Inicial_IdtGen_id" FromRole="Tbl_Inicial" ToRole="Tbl_Identidad_de_Genero" />
+          <NavigationProperty Name="Tbl_OrientacionSexual" Relationship="Self.FK_Tbl_Inicial_OrSex_id" FromRole="Tbl_Inicial" ToRole="Tbl_OrientacionSexual" />
+          <NavigationProperty Name="Tbl_Religion" Relationship="Self.FK_Tbl_Inicial_Rel_id" FromRole="Tbl_Inicial" ToRole="Tbl_Religion" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_inicial_id" FromRole="Tbl_Inicial" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_ModalidadLaboral">
+          <Key>
+            <PropertyRef Name="Per_modLaboral_id" />
+          </Key>
+          <Property Name="Per_modLaboral_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Per_modLaboral_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_modLaboral_Estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_Per_modLaboral_id" FromRole="Tbl_ModalidadLaboral" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_OrientacionSexual">
+          <Key>
+            <PropertyRef Name="OrSex_id" />
+          </Key>
+          <Property Name="OrSex_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrSex_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OrSex_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Inicial_OrSex_id" FromRole="Tbl_OrientacionSexual" ToRole="Tbl_Inicial" />
+        </EntityType>
+        <EntityType Name="Tbl_Personas">
+          <Key>
+            <PropertyRef Name="Per_id" />
+          </Key>
+          <Property Name="Per_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Per_Cedula" Type="Int32" />
+          <Property Name="Per_priNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_segNombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_priApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_segApellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_fechNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="Zona_id" Type="Int32" />
+          <Property Name="DirInsti_Id" Type="Int32" />
+          <Property Name="Sede_id" Type="Int32" />
+          <Property Name="ProcesoInt_id" Type="Int32" />
+          <Property Name="EstrucProgra_id" Type="Int32" />
+          <Property Name="Per_fechInicio" Type="DateTime" Precision="3" />
+          <Property Name="Per_fechDesde" Type="DateTime" Precision="3" />
+          <Property Name="Per_fechHasta" Type="DateTime" Precision="3" />
+          <Property Name="EstructuraUno_id" Type="Int32" />
+          <Property Name="EstructuraDos_id" Type="Int32" />
+          <Property Name="Rmu_id" Type="Int32" />
+          <Property Name="Grado_id" Type="Int32" />
+          <Property Name="GrpOcupacional_id" Type="Int32" />
+          <Property Name="CargoInsti_id" Type="Int32" />
+          <Property Name="GrupoEtni_id" Type="Int32" />
+          <Property Name="Per_modLaboral_id" Type="Int32" />
+          <Property Name="Per_numContrato" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Per_partiGeneral" Type="Int32" />
+          <Property Name="Per_partiIndividual" Type="Int32" />
+          <Property Name="Per_genero" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Per_discapacidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_motivoSalida" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CorreoInts_id" Type="Int32" />
+          <Property Name="TelfInts_id" Type="Int32" />
+          <Property Name="Per_numCelular" Type="Int32" />
+          <Property Name="Per_dirDomicilio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_correoPersonal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_instrucFormal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_añosExperiencia" Type="DateTime" Precision="3" />
+          <Property Name="Per_comServicios" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Per_oriDesComision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Per_fechComiDesde" Type="DateTime" Precision="3" />
+          <Property Name="Per_fechComiHasta" Type="DateTime" Precision="3" />
+          <Property Name="Per_nomPerContacEmergencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_numPerContacEmergencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Per_observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="inicial_id" Type="Int32" />
+          <Property Name="Per_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_CargoInstitucional" Relationship="Self.FK_Tbl_Personas_CargoInsti_id" FromRole="Tbl_Personas" ToRole="Tbl_CargoInstitucional" />
+          <NavigationProperty Name="Tbl_CorreoIntitucional" Relationship="Self.FK_Tbl_Personas_CorreoInts_id" FromRole="Tbl_Personas" ToRole="Tbl_CorreoIntitucional" />
+          <NavigationProperty Name="Tbl_DireccionInstitucional" Relationship="Self.FK_Tbl_Personas_DirInsti_Id" FromRole="Tbl_Personas" ToRole="Tbl_DireccionInstitucional" />
+          <NavigationProperty Name="Tbl_EstrcuturaUno" Relationship="Self.FK_Tbl_Personas_EstructuraUno_id" FromRole="Tbl_Personas" ToRole="Tbl_EstrcuturaUno" />
+          <NavigationProperty Name="Tbl_EstructuraDos" Relationship="Self.FK_Tbl_Personas_EstructuraDos_id" FromRole="Tbl_Personas" ToRole="Tbl_EstructuraDos" />
+          <NavigationProperty Name="Tbl_EstructuraProgramatica" Relationship="Self.FK_Tbl_Personas_EstrucProgra_id" FromRole="Tbl_Personas" ToRole="Tbl_EstructuraProgramatica" />
+          <NavigationProperty Name="Tbl_Grado" Relationship="Self.FK_Tbl_Personas_Grado_id" FromRole="Tbl_Personas" ToRole="Tbl_Grado" />
+          <NavigationProperty Name="Tbl_GrupoEtnico" Relationship="Self.FK_Tbl_Personas_GrupoEtni_id" FromRole="Tbl_Personas" ToRole="Tbl_GrupoEtnico" />
+          <NavigationProperty Name="Tbl_GrupoOcupacional" Relationship="Self.FK_Tbl_Personas_GrpOcupacional_id" FromRole="Tbl_Personas" ToRole="Tbl_GrupoOcupacional" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Personas_inicial_id" FromRole="Tbl_Personas" ToRole="Tbl_Inicial" />
+          <NavigationProperty Name="Tbl_ModalidadLaboral" Relationship="Self.FK_Tbl_Personas_Per_modLaboral_id" FromRole="Tbl_Personas" ToRole="Tbl_ModalidadLaboral" />
+          <NavigationProperty Name="Tbl_ProcesoInterno" Relationship="Self.FK_Tbl_Personas_ProcesoInt_id" FromRole="Tbl_Personas" ToRole="Tbl_ProcesoInterno" />
+          <NavigationProperty Name="Tbl_Rmu" Relationship="Self.FK_Tbl_Personas_Rmu_id" FromRole="Tbl_Personas" ToRole="Tbl_Rmu" />
+          <NavigationProperty Name="Tbl_Sede" Relationship="Self.FK_Tbl_Personas_Sede_id" FromRole="Tbl_Personas" ToRole="Tbl_Sede" />
+          <NavigationProperty Name="Tbl_TelefonoIntitucional" Relationship="Self.FK_Tbl_Personas_TelfInts_id" FromRole="Tbl_Personas" ToRole="Tbl_TelefonoIntitucional" />
+          <NavigationProperty Name="Tbl_Zona" Relationship="Self.FK_Tbl_Personas_Zona_id" FromRole="Tbl_Personas" ToRole="Tbl_Zona" />
+        </EntityType>
+        <EntityType Name="Tbl_ProcesoInterno">
+          <Key>
+            <PropertyRef Name="ProcesoInt_id" />
+          </Key>
+          <Property Name="ProcesoInt_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProcesoInt_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ProcesoInt_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_ProcesoInt_id" FromRole="Tbl_ProcesoInterno" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Religion">
+          <Key>
+            <PropertyRef Name="Rel_id" />
+          </Key>
+          <Property Name="Rel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rel_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Rel_estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Tbl_Inicial" Relationship="Self.FK_Tbl_Inicial_Rel_id" FromRole="Tbl_Religion" ToRole="Tbl_Inicial" />
+        </EntityType>
+        <EntityType Name="Tbl_Rmu">
+          <Key>
+            <PropertyRef Name="Rmu_id" />
+          </Key>
+          <Property Name="Rmu_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rmu_val" Type="Double" />
+          <Property Name="Rmu_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_Rmu_id" FromRole="Tbl_Rmu" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Sede">
+          <Key>
+            <PropertyRef Name="Sede_id" />
+          </Key>
+          <Property Name="Sede_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sede_nom" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sede_Estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_Sede_id" FromRole="Tbl_Sede" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_TelefonoIntitucional">
+          <Key>
+            <PropertyRef Name="TelfInts_id" />
+          </Key>
+          <Property Name="TelfInts_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TelfInts_num" Type="Int32" />
+          <Property Name="TelfInts_exten" Type="Int32" />
+          <Property Name="TelfInst_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_TelfInts_id" FromRole="Tbl_TelefonoIntitucional" ToRole="Tbl_Personas" />
+        </EntityType>
+        <EntityType Name="Tbl_Zona">
+          <Key>
+            <PropertyRef Name="Zona_id" />
+          </Key>
+          <Property Name="Zona_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Zona_nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Zona_estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tbl_Personas" Relationship="Self.FK_Tbl_Personas_Zona_id" FromRole="Tbl_Zona" ToRole="Tbl_Personas" />
+        </EntityType>
+        <Association Name="FK_Tbl_Personas_CargoInsti_id">
+          <End Role="Tbl_CargoInstitucional" Type="Self.Tbl_CargoInstitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_CargoInstitucional">
+              <PropertyRef Name="CargoIntsi_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="CargoInsti_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_CorreoInts_id">
+          <End Role="Tbl_CorreoIntitucional" Type="Self.Tbl_CorreoIntitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_CorreoIntitucional">
+              <PropertyRef Name="CorreoInts_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="CorreoInts_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_DirInsti_Id">
+          <End Role="Tbl_DireccionInstitucional" Type="Self.Tbl_DireccionInstitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_DireccionInstitucional">
+              <PropertyRef Name="DirInsti_Id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="DirInsti_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_Dis_id">
+          <End Role="Tbl_Discapacidad" Type="Self.Tbl_Discapacidad" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Discapacidad">
+              <PropertyRef Name="Dis_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="Dis_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Emp_Per_Emp_id">
+          <End Role="Tbl_Empresa" Type="Self.Tbl_Empresa" Multiplicity="0..1" />
+          <End Role="Tbl_Emp_Per" Type="Self.Tbl_Emp_Per" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Empresa">
+              <PropertyRef Name="Emp_id" />
+            </Principal>
+            <Dependent Role="Tbl_Emp_Per">
+              <PropertyRef Name="Emp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Emp_Per_Per_id">
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="0..1" />
+          <End Role="Tbl_Emp_Per" Type="Self.Tbl_Emp_Per" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Inicial">
+              <PropertyRef Name="inicial_id" />
+            </Principal>
+            <Dependent Role="Tbl_Emp_Per">
+              <PropertyRef Name="Per_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstructuraUno_id">
+          <End Role="Tbl_EstrcuturaUno" Type="Self.Tbl_EstrcuturaUno" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstrcuturaUno">
+              <PropertyRef Name="EstructuraUno_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstructuraUno_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstructuraDos_id">
+          <End Role="Tbl_EstructuraDos" Type="Self.Tbl_EstructuraDos" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstructuraDos">
+              <PropertyRef Name="EstructuraDos_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstructuraDos_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_EstrucProgra_id">
+          <End Role="Tbl_EstructuraProgramatica" Type="Self.Tbl_EstructuraProgramatica" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_EstructuraProgramatica">
+              <PropertyRef Name="EstrucProgra_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="EstrucProgra_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Grado_id">
+          <End Role="Tbl_Grado" Type="Self.Tbl_Grado" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Grado">
+              <PropertyRef Name="Grado_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Grado_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_GrupoEtni_id">
+          <End Role="Tbl_GrupoEtnico" Type="Self.Tbl_GrupoEtnico" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_GrupoEtnico">
+              <PropertyRef Name="GrupoEtni_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="GrupoEtni_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_GrpOcupacional_id">
+          <End Role="Tbl_GrupoOcupacional" Type="Self.Tbl_GrupoOcupacional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_GrupoOcupacional">
+              <PropertyRef Name="GrpOcupacional_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="GrpOcupacional_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_IdtGen_id">
+          <End Role="Tbl_Identidad_de_Genero" Type="Self.Tbl_Identidad_de_Genero" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Identidad_de_Genero">
+              <PropertyRef Name="IdtGen_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="IdtGen_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_OrSex_id">
+          <End Role="Tbl_OrientacionSexual" Type="Self.Tbl_OrientacionSexual" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_OrientacionSexual">
+              <PropertyRef Name="OrSex_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="OrSex_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Inicial_Rel_id">
+          <End Role="Tbl_Religion" Type="Self.Tbl_Religion" Multiplicity="0..1" />
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Religion">
+              <PropertyRef Name="Rel_id" />
+            </Principal>
+            <Dependent Role="Tbl_Inicial">
+              <PropertyRef Name="Rel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_inicial_id">
+          <End Role="Tbl_Inicial" Type="Self.Tbl_Inicial" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Inicial">
+              <PropertyRef Name="inicial_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="inicial_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Per_modLaboral_id">
+          <End Role="Tbl_ModalidadLaboral" Type="Self.Tbl_ModalidadLaboral" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_ModalidadLaboral">
+              <PropertyRef Name="Per_modLaboral_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Per_modLaboral_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_ProcesoInt_id">
+          <End Role="Tbl_ProcesoInterno" Type="Self.Tbl_ProcesoInterno" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_ProcesoInterno">
+              <PropertyRef Name="ProcesoInt_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="ProcesoInt_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Rmu_id">
+          <End Role="Tbl_Rmu" Type="Self.Tbl_Rmu" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Rmu">
+              <PropertyRef Name="Rmu_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Rmu_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Sede_id">
+          <End Role="Tbl_Sede" Type="Self.Tbl_Sede" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Sede">
+              <PropertyRef Name="Sede_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Sede_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_TelfInts_id">
+          <End Role="Tbl_TelefonoIntitucional" Type="Self.Tbl_TelefonoIntitucional" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_TelefonoIntitucional">
+              <PropertyRef Name="TelfInts_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="TelfInts_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tbl_Personas_Zona_id">
+          <End Role="Tbl_Zona" Type="Self.Tbl_Zona" Multiplicity="0..1" />
+          <End Role="Tbl_Personas" Type="Self.Tbl_Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Zona">
+              <PropertyRef Name="Zona_id" />
+            </Principal>
+            <Dependent Role="Tbl_Personas">
+              <PropertyRef Name="Zona_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="RRHHECU911Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Tbl_CargoInstitucional" EntityType="Self.Tbl_CargoInstitucional" />
+          <EntitySet Name="Tbl_CorreoIntitucional" EntityType="Self.Tbl_CorreoIntitucional" />
+          <EntitySet Name="Tbl_DireccionInstitucional" EntityType="Self.Tbl_DireccionInstitucional" />
+          <EntitySet Name="Tbl_Discapacidad" EntityType="Self.Tbl_Discapacidad" />
+          <EntitySet Name="Tbl_Emp_Per" EntityType="Self.Tbl_Emp_Per" />
+          <EntitySet Name="Tbl_Empresa" EntityType="Self.Tbl_Empresa" />
+          <EntitySet Name="Tbl_EstrcuturaUno" EntityType="Self.Tbl_EstrcuturaUno" />
+          <EntitySet Name="Tbl_EstructuraDos" EntityType="Self.Tbl_EstructuraDos" />
+          <EntitySet Name="Tbl_EstructuraProgramatica" EntityType="Self.Tbl_EstructuraProgramatica" />
+          <EntitySet Name="Tbl_Grado" EntityType="Self.Tbl_Grado" />
+          <EntitySet Name="Tbl_GrupoEtnico" EntityType="Self.Tbl_GrupoEtnico" />
+          <EntitySet Name="Tbl_GrupoOcupacional" EntityType="Self.Tbl_GrupoOcupacional" />
+          <EntitySet Name="Tbl_Identidad_de_Genero" EntityType="Self.Tbl_Identidad_de_Genero" />
+          <EntitySet Name="Tbl_Inicial" EntityType="Self.Tbl_Inicial" />
+          <EntitySet Name="Tbl_ModalidadLaboral" EntityType="Self.Tbl_ModalidadLaboral" />
+          <EntitySet Name="Tbl_OrientacionSexual" EntityType="Self.Tbl_OrientacionSexual" />
+          <EntitySet Name="Tbl_Personas" EntityType="Self.Tbl_Personas" />
+          <EntitySet Name="Tbl_ProcesoInterno" EntityType="Self.Tbl_ProcesoInterno" />
+          <EntitySet Name="Tbl_Religion" EntityType="Self.Tbl_Religion" />
+          <EntitySet Name="Tbl_Rmu" EntityType="Self.Tbl_Rmu" />
+          <EntitySet Name="Tbl_Sede" EntityType="Self.Tbl_Sede" />
+          <EntitySet Name="Tbl_TelefonoIntitucional" EntityType="Self.Tbl_TelefonoIntitucional" />
+          <EntitySet Name="Tbl_Zona" EntityType="Self.Tbl_Zona" />
+          <AssociationSet Name="FK_Tbl_Personas_CargoInsti_id" Association="Self.FK_Tbl_Personas_CargoInsti_id">
+            <End Role="Tbl_CargoInstitucional" EntitySet="Tbl_CargoInstitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_CorreoInts_id" Association="Self.FK_Tbl_Personas_CorreoInts_id">
+            <End Role="Tbl_CorreoIntitucional" EntitySet="Tbl_CorreoIntitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_DirInsti_Id" Association="Self.FK_Tbl_Personas_DirInsti_Id">
+            <End Role="Tbl_DireccionInstitucional" EntitySet="Tbl_DireccionInstitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_Dis_id" Association="Self.FK_Tbl_Inicial_Dis_id">
+            <End Role="Tbl_Discapacidad" EntitySet="Tbl_Discapacidad" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Emp_Per_Emp_id" Association="Self.FK_Tbl_Emp_Per_Emp_id">
+            <End Role="Tbl_Empresa" EntitySet="Tbl_Empresa" />
+            <End Role="Tbl_Emp_Per" EntitySet="Tbl_Emp_Per" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Emp_Per_Per_id" Association="Self.FK_Tbl_Emp_Per_Per_id">
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+            <End Role="Tbl_Emp_Per" EntitySet="Tbl_Emp_Per" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstructuraUno_id" Association="Self.FK_Tbl_Personas_EstructuraUno_id">
+            <End Role="Tbl_EstrcuturaUno" EntitySet="Tbl_EstrcuturaUno" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstructuraDos_id" Association="Self.FK_Tbl_Personas_EstructuraDos_id">
+            <End Role="Tbl_EstructuraDos" EntitySet="Tbl_EstructuraDos" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_EstrucProgra_id" Association="Self.FK_Tbl_Personas_EstrucProgra_id">
+            <End Role="Tbl_EstructuraProgramatica" EntitySet="Tbl_EstructuraProgramatica" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Grado_id" Association="Self.FK_Tbl_Personas_Grado_id">
+            <End Role="Tbl_Grado" EntitySet="Tbl_Grado" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_GrupoEtni_id" Association="Self.FK_Tbl_Personas_GrupoEtni_id">
+            <End Role="Tbl_GrupoEtnico" EntitySet="Tbl_GrupoEtnico" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_GrpOcupacional_id" Association="Self.FK_Tbl_Personas_GrpOcupacional_id">
+            <End Role="Tbl_GrupoOcupacional" EntitySet="Tbl_GrupoOcupacional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_IdtGen_id" Association="Self.FK_Tbl_Inicial_IdtGen_id">
+            <End Role="Tbl_Identidad_de_Genero" EntitySet="Tbl_Identidad_de_Genero" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_OrSex_id" Association="Self.FK_Tbl_Inicial_OrSex_id">
+            <End Role="Tbl_OrientacionSexual" EntitySet="Tbl_OrientacionSexual" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Inicial_Rel_id" Association="Self.FK_Tbl_Inicial_Rel_id">
+            <End Role="Tbl_Religion" EntitySet="Tbl_Religion" />
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_inicial_id" Association="Self.FK_Tbl_Personas_inicial_id">
+            <End Role="Tbl_Inicial" EntitySet="Tbl_Inicial" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Per_modLaboral_id" Association="Self.FK_Tbl_Personas_Per_modLaboral_id">
+            <End Role="Tbl_ModalidadLaboral" EntitySet="Tbl_ModalidadLaboral" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_ProcesoInt_id" Association="Self.FK_Tbl_Personas_ProcesoInt_id">
+            <End Role="Tbl_ProcesoInterno" EntitySet="Tbl_ProcesoInterno" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Rmu_id" Association="Self.FK_Tbl_Personas_Rmu_id">
+            <End Role="Tbl_Rmu" EntitySet="Tbl_Rmu" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Sede_id" Association="Self.FK_Tbl_Personas_Sede_id">
+            <End Role="Tbl_Sede" EntitySet="Tbl_Sede" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_TelfInts_id" Association="Self.FK_Tbl_Personas_TelfInts_id">
+            <End Role="Tbl_TelefonoIntitucional" EntitySet="Tbl_TelefonoIntitucional" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tbl_Personas_Zona_id" Association="Self.FK_Tbl_Personas_Zona_id">
+            <End Role="Tbl_Zona" EntitySet="Tbl_Zona" />
+            <End Role="Tbl_Personas" EntitySet="Tbl_Personas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RRHHECU911ModelStoreContainer" CdmEntityContainer="RRHHECU911Entities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="RRHHECU911Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CargoInstitucional">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_CargoInstitucional">
+              <MappingFragment StoreEntitySet="Tbl_CargoInstitucional">
+                <ScalarProperty Name="CargoIntsi_id" ColumnName="CargoIntsi_id" />
+                <ScalarProperty Name="CargoInsti_nom" ColumnName="CargoInsti_nom" />
+                <ScalarProperty Name="CargoInsti_estado" ColumnName="CargoInsti_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CorreoIntitucional">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_CorreoIntitucional">
+              <MappingFragment StoreEntitySet="Tbl_CorreoIntitucional">
+                <ScalarProperty Name="CorreoInts_id" ColumnName="CorreoInts_id" />
+                <ScalarProperty Name="CorreoInts_nom" ColumnName="CorreoInts_nom" />
+                <ScalarProperty Name="CorreoInst_estado" ColumnName="CorreoInst_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_DireccionInstitucional">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_DireccionInstitucional">
+              <MappingFragment StoreEntitySet="Tbl_DireccionInstitucional">
+                <ScalarProperty Name="DirInsti_Id" ColumnName="DirInsti_Id" />
+                <ScalarProperty Name="DirInsti_nom" ColumnName="DirInsti_nom" />
+                <ScalarProperty Name="DirInsti_estado" ColumnName="DirInsti_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Discapacidad">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Discapacidad">
+              <MappingFragment StoreEntitySet="Tbl_Discapacidad">
+                <ScalarProperty Name="Dis_id" ColumnName="Dis_id" />
+                <ScalarProperty Name="Dis_nombre" ColumnName="Dis_nombre" />
+                <ScalarProperty Name="Dis_estado" ColumnName="Dis_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Emp_Per">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Emp_Per">
+              <MappingFragment StoreEntitySet="Tbl_Emp_Per">
+                <ScalarProperty Name="EmpPer_id" ColumnName="EmpPer_id" />
+                <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+                <ScalarProperty Name="Per_id" ColumnName="Per_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Empresa">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Empresa">
+              <MappingFragment StoreEntitySet="Tbl_Empresa">
+                <ScalarProperty Name="Emp_id" ColumnName="Emp_id" />
+                <ScalarProperty Name="Emp_nombre" ColumnName="Emp_nombre" />
+                <ScalarProperty Name="Emp_ruc" ColumnName="Emp_ruc" />
+                <ScalarProperty Name="Emp_ciiu" ColumnName="Emp_ciiu" />
+                <ScalarProperty Name="Emp_estabSalud" ColumnName="Emp_estabSalud" />
+                <ScalarProperty Name="Emp_estado" ColumnName="Emp_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_EstrcuturaUno">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_EstrcuturaUno">
+              <MappingFragment StoreEntitySet="Tbl_EstrcuturaUno">
+                <ScalarProperty Name="EstructuraUno_id" ColumnName="EstructuraUno_id" />
+                <ScalarProperty Name="EstructuraUno_nom" ColumnName="EstructuraUno_nom" />
+                <ScalarProperty Name="EstructuraUno_estado" ColumnName="EstructuraUno_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_EstructuraDos">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_EstructuraDos">
+              <MappingFragment StoreEntitySet="Tbl_EstructuraDos">
+                <ScalarProperty Name="EstructuraDos_id" ColumnName="EstructuraDos_id" />
+                <ScalarProperty Name="EstructuraDos_nom" ColumnName="EstructuraDos_nom" />
+                <ScalarProperty Name="EstructuraDos_estado" ColumnName="EstructuraDos_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_EstructuraProgramatica">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_EstructuraProgramatica">
+              <MappingFragment StoreEntitySet="Tbl_EstructuraProgramatica">
+                <ScalarProperty Name="EstrucProgra_id" ColumnName="EstrucProgra_id" />
+                <ScalarProperty Name="EstrucProgra_nom" ColumnName="EstrucProgra_nom" />
+                <ScalarProperty Name="EstrucProgra_estado" ColumnName="EstrucProgra_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Grado">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Grado">
+              <MappingFragment StoreEntitySet="Tbl_Grado">
+                <ScalarProperty Name="Grado_id" ColumnName="Grado_id" />
+                <ScalarProperty Name="Grado_Per" ColumnName="Grado_Per" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_GrupoEtnico">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_GrupoEtnico">
+              <MappingFragment StoreEntitySet="Tbl_GrupoEtnico">
+                <ScalarProperty Name="GrupoEtni_id" ColumnName="GrupoEtni_id" />
+                <ScalarProperty Name="GrupoEtni_nom" ColumnName="GrupoEtni_nom" />
+                <ScalarProperty Name="GrupoEtni_estado" ColumnName="GrupoEtni_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_GrupoOcupacional">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_GrupoOcupacional">
+              <MappingFragment StoreEntitySet="Tbl_GrupoOcupacional">
+                <ScalarProperty Name="GrpOcupacional_id" ColumnName="GrpOcupacional_id" />
+                <ScalarProperty Name="GrpOcupacional_nom" ColumnName="GrpOcupacional_nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Identidad_de_Genero">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Identidad_de_Genero">
+              <MappingFragment StoreEntitySet="Tbl_Identidad_de_Genero">
+                <ScalarProperty Name="IdtGen_id" ColumnName="IdtGen_id" />
+                <ScalarProperty Name="IdtGen_nombre" ColumnName="IdtGen_nombre" />
+                <ScalarProperty Name="IdtGen_estado" ColumnName="IdtGen_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Inicial">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Inicial">
+              <MappingFragment StoreEntitySet="Tbl_Inicial">
+                <ScalarProperty Name="inicial_id" ColumnName="inicial_id" />
+                <ScalarProperty Name="inicial_edad" ColumnName="inicial_edad" />
+                <ScalarProperty Name="inicial_NumArchivo" ColumnName="inicial_NumArchivo" />
+                <ScalarProperty Name="Rel_id" ColumnName="Rel_id" />
+                <ScalarProperty Name="inicial_groSanguineo" ColumnName="inicial_groSanguineo" />
+                <ScalarProperty Name="inicial_lateralidad" ColumnName="inicial_lateralidad" />
+                <ScalarProperty Name="OrSex_id" ColumnName="OrSex_id" />
+                <ScalarProperty Name="IdtGen_id" ColumnName="IdtGen_id" />
+                <ScalarProperty Name="Dis_id" ColumnName="Dis_id" />
+                <ScalarProperty Name="inicial_fechIngTrabajo" ColumnName="inicial_fechIngTrabajo" />
+                <ScalarProperty Name="inicial_fechSalida" ColumnName="inicial_fechSalida" />
+                <ScalarProperty Name="inicial_tiempo" ColumnName="inicial_tiempo" />
+                <ScalarProperty Name="inicial_puesTrabajo" ColumnName="inicial_puesTrabajo" />
+                <ScalarProperty Name="inicial_Actividades" ColumnName="inicial_Actividades" />
+                <ScalarProperty Name="inicial_facRiesgo" ColumnName="inicial_facRiesgo" />
+                <ScalarProperty Name="inicial_areaTrabajo" ColumnName="inicial_areaTrabajo" />
+                <ScalarProperty Name="inicial_actsRelevantes" ColumnName="inicial_actsRelevantes" />
+                <ScalarProperty Name="Act_id" ColumnName="Act_id" />
+                <ScalarProperty Name="FacR_id" ColumnName="FacR_id" />
+                <ScalarProperty Name="inicial_estado" ColumnName="inicial_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ModalidadLaboral">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_ModalidadLaboral">
+              <MappingFragment StoreEntitySet="Tbl_ModalidadLaboral">
+                <ScalarProperty Name="Per_modLaboral_id" ColumnName="Per_modLaboral_id" />
+                <ScalarProperty Name="Per_modLaboral_nombre" ColumnName="Per_modLaboral_nombre" />
+                <ScalarProperty Name="Per_modLaboral_Estado" ColumnName="Per_modLaboral_Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_OrientacionSexual">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_OrientacionSexual">
+              <MappingFragment StoreEntitySet="Tbl_OrientacionSexual">
+                <ScalarProperty Name="OrSex_id" ColumnName="OrSex_id" />
+                <ScalarProperty Name="OrSex_nombre" ColumnName="OrSex_nombre" />
+                <ScalarProperty Name="OrSex_estado" ColumnName="OrSex_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Personas">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Personas">
+              <MappingFragment StoreEntitySet="Tbl_Personas">
+                <ScalarProperty Name="Per_id" ColumnName="Per_id" />
+                <ScalarProperty Name="Per_Cedula" ColumnName="Per_Cedula" />
+                <ScalarProperty Name="Per_priNombre" ColumnName="Per_priNombre" />
+                <ScalarProperty Name="Per_segNombre" ColumnName="Per_segNombre" />
+                <ScalarProperty Name="Per_priApellido" ColumnName="Per_priApellido" />
+                <ScalarProperty Name="Per_segApellido" ColumnName="Per_segApellido" />
+                <ScalarProperty Name="Per_fechNacimiento" ColumnName="Per_fechNacimiento" />
+                <ScalarProperty Name="Zona_id" ColumnName="Zona_id" />
+                <ScalarProperty Name="DirInsti_Id" ColumnName="DirInsti_Id" />
+                <ScalarProperty Name="Sede_id" ColumnName="Sede_id" />
+                <ScalarProperty Name="ProcesoInt_id" ColumnName="ProcesoInt_id" />
+                <ScalarProperty Name="EstrucProgra_id" ColumnName="EstrucProgra_id" />
+                <ScalarProperty Name="Per_fechInicio" ColumnName="Per_fechInicio" />
+                <ScalarProperty Name="Per_fechDesde" ColumnName="Per_fechDesde" />
+                <ScalarProperty Name="Per_fechHasta" ColumnName="Per_fechHasta" />
+                <ScalarProperty Name="EstructuraUno_id" ColumnName="EstructuraUno_id" />
+                <ScalarProperty Name="EstructuraDos_id" ColumnName="EstructuraDos_id" />
+                <ScalarProperty Name="Rmu_id" ColumnName="Rmu_id" />
+                <ScalarProperty Name="Grado_id" ColumnName="Grado_id" />
+                <ScalarProperty Name="GrpOcupacional_id" ColumnName="GrpOcupacional_id" />
+                <ScalarProperty Name="CargoInsti_id" ColumnName="CargoInsti_id" />
+                <ScalarProperty Name="GrupoEtni_id" ColumnName="GrupoEtni_id" />
+                <ScalarProperty Name="Per_modLaboral_id" ColumnName="Per_modLaboral_id" />
+                <ScalarProperty Name="Per_numContrato" ColumnName="Per_numContrato" />
+                <ScalarProperty Name="Per_partiGeneral" ColumnName="Per_partiGeneral" />
+                <ScalarProperty Name="Per_partiIndividual" ColumnName="Per_partiIndividual" />
+                <ScalarProperty Name="Per_genero" ColumnName="Per_genero" />
+                <ScalarProperty Name="Per_discapacidad" ColumnName="Per_discapacidad" />
+                <ScalarProperty Name="Per_motivoSalida" ColumnName="Per_motivoSalida" />
+                <ScalarProperty Name="CorreoInts_id" ColumnName="CorreoInts_id" />
+                <ScalarProperty Name="TelfInts_id" ColumnName="TelfInts_id" />
+                <ScalarProperty Name="Per_numCelular" ColumnName="Per_numCelular" />
+                <ScalarProperty Name="Per_dirDomicilio" ColumnName="Per_dirDomicilio" />
+                <ScalarProperty Name="Per_correoPersonal" ColumnName="Per_correoPersonal" />
+                <ScalarProperty Name="Per_instrucFormal" ColumnName="Per_instrucFormal" />
+                <ScalarProperty Name="Per_añosExperiencia" ColumnName="Per_añosExperiencia" />
+                <ScalarProperty Name="Per_comServicios" ColumnName="Per_comServicios" />
+                <ScalarProperty Name="Per_oriDesComision" ColumnName="Per_oriDesComision" />
+                <ScalarProperty Name="Per_fechComiDesde" ColumnName="Per_fechComiDesde" />
+                <ScalarProperty Name="Per_fechComiHasta" ColumnName="Per_fechComiHasta" />
+                <ScalarProperty Name="Per_nomPerContacEmergencia" ColumnName="Per_nomPerContacEmergencia" />
+                <ScalarProperty Name="Per_numPerContacEmergencia" ColumnName="Per_numPerContacEmergencia" />
+                <ScalarProperty Name="Per_observaciones" ColumnName="Per_observaciones" />
+                <ScalarProperty Name="inicial_id" ColumnName="inicial_id" />
+                <ScalarProperty Name="Per_estado" ColumnName="Per_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ProcesoInterno">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_ProcesoInterno">
+              <MappingFragment StoreEntitySet="Tbl_ProcesoInterno">
+                <ScalarProperty Name="ProcesoInt_id" ColumnName="ProcesoInt_id" />
+                <ScalarProperty Name="ProcesoInt_nombre" ColumnName="ProcesoInt_nombre" />
+                <ScalarProperty Name="ProcesoInt_estado" ColumnName="ProcesoInt_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Religion">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Religion">
+              <MappingFragment StoreEntitySet="Tbl_Religion">
+                <ScalarProperty Name="Rel_id" ColumnName="Rel_id" />
+                <ScalarProperty Name="Rel_nombre" ColumnName="Rel_nombre" />
+                <ScalarProperty Name="Rel_estado" ColumnName="Rel_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Rmu">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Rmu">
+              <MappingFragment StoreEntitySet="Tbl_Rmu">
+                <ScalarProperty Name="Rmu_id" ColumnName="Rmu_id" />
+                <ScalarProperty Name="Rmu_val" ColumnName="Rmu_val" />
+                <ScalarProperty Name="Rmu_estado" ColumnName="Rmu_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Sede">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Sede">
+              <MappingFragment StoreEntitySet="Tbl_Sede">
+                <ScalarProperty Name="Sede_id" ColumnName="Sede_id" />
+                <ScalarProperty Name="Sede_nom" ColumnName="Sede_nom" />
+                <ScalarProperty Name="Sede_Estado" ColumnName="Sede_Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_TelefonoIntitucional">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_TelefonoIntitucional">
+              <MappingFragment StoreEntitySet="Tbl_TelefonoIntitucional">
+                <ScalarProperty Name="TelfInts_id" ColumnName="TelfInts_id" />
+                <ScalarProperty Name="TelfInts_num" ColumnName="TelfInts_num" />
+                <ScalarProperty Name="TelfInts_exten" ColumnName="TelfInts_exten" />
+                <ScalarProperty Name="TelfInst_estado" ColumnName="TelfInst_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Zona">
+            <EntityTypeMapping TypeName="RRHHECU911Model.Tbl_Zona">
+              <MappingFragment StoreEntitySet="Tbl_Zona">
+                <ScalarProperty Name="Zona_id" ColumnName="Zona_id" />
+                <ScalarProperty Name="Zona_nom" ColumnName="Zona_nom" />
+                <ScalarProperty Name="Zona_estado" ColumnName="Zona_estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

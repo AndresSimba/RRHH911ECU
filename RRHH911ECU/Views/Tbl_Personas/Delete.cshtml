@@ -1,0 +1,377 @@
+﻿@model RRHH911ECU.Models.Tbl_Personas
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tbl_Personas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_priNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_priNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_segNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_segNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_priApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_priApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_segApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_segApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechDesde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechDesde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechHasta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechHasta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_numContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_numContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_partiGeneral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_partiGeneral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_partiIndividual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_partiIndividual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_discapacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_discapacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_motivoSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_motivoSalida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_numCelular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_numCelular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_dirDomicilio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_dirDomicilio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_correoPersonal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_correoPersonal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_instrucFormal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_instrucFormal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_añosExperiencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_añosExperiencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_comServicios)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_comServicios)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_oriDesComision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_oriDesComision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechComiDesde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechComiDesde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_fechComiHasta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_fechComiHasta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_nomPerContacEmergencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_nomPerContacEmergencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_numPerContacEmergencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_numPerContacEmergencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_observaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Per_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Per_estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_CargoInstitucional.CargoInsti_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_CargoInstitucional.CargoInsti_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_CorreoIntitucional.CorreoInts_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_CorreoIntitucional.CorreoInts_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_DireccionInstitucional.DirInsti_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_DireccionInstitucional.DirInsti_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_EstrcuturaUno.EstructuraUno_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_EstrcuturaUno.EstructuraUno_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_EstructuraDos.EstructuraDos_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_EstructuraDos.EstructuraDos_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_EstructuraProgramatica.EstrucProgra_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_EstructuraProgramatica.EstrucProgra_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Grado.Grado_Per)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Grado.Grado_Per)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_GrupoEtnico.GrupoEtni_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_GrupoEtnico.GrupoEtni_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_GrupoOcupacional.GrpOcupacional_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_GrupoOcupacional.GrpOcupacional_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Inicial.inicial_NumArchivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Inicial.inicial_NumArchivo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_ModalidadLaboral.Per_modLaboral_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_ModalidadLaboral.Per_modLaboral_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_ProcesoInterno.ProcesoInt_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_ProcesoInterno.ProcesoInt_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Rmu.Rmu_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Rmu.Rmu_estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Sede.Sede_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Sede.Sede_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_TelefonoIntitucional.TelfInst_estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_TelefonoIntitucional.TelfInst_estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tbl_Zona.Zona_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tbl_Zona.Zona_nom)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

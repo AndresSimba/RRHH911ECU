@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d17969465a54387b883b878327f2481" Name="Diagram1">
+        <EntityTypeShape EntityType="RRHHECU911Model.sysdiagrams" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_CargoInstitucional" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_CorreoIntitucional" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_DireccionInstitucional" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Discapacidad" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Emp_Per" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Empresa" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_EstrcuturaUno" Width="1.5" PointX="6" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_EstructuraDos" Width="1.5" PointX="6" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_EstructuraProgramatica" Width="1.5" PointX="6" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Grado" Width="1.5" PointX="6" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_GrupoEtnico" Width="1.5" PointX="6" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_GrupoOcupacional" Width="1.5" PointX="6" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Identidad_de_Genero" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Inicial" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_ModalidadLaboral" Width="1.5" PointX="6" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_OrientacionSexual" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Personas" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_ProcesoInterno" Width="1.5" PointX="6" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Religion" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Rmu" Width="1.5" PointX="6" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Sede" Width="1.5" PointX="6" PointY="42" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_TelefonoIntitucional" Width="1.5" PointX="6" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RRHHECU911Model.Tbl_Zona" Width="1.5" PointX="6" PointY="47.25" IsExpanded="true" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_CargoInsti_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_CorreoInts_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_DirInsti_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Inicial_Dis_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Emp_Per_Emp_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Emp_Per_Per_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_EstructuraUno_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_EstructuraDos_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_EstrucProgra_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_Grado_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_GrupoEtni_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_GrpOcupacional_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Inicial_IdtGen_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Inicial_OrSex_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Inicial_Rel_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_inicial_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_Per_modLaboral_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_ProcesoInt_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_Rmu_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_Sede_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_TelfInts_id" ManuallyRouted="false" />
+        <AssociationConnector Association="RRHHECU911Model.FK_Tbl_Personas_Zona_id" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,292 @@
+﻿@model IEnumerable<RRHH911ECU.Models.Tbl_Personas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_Cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_priNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_segNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_priApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_segApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechDesde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechHasta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_numContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_partiGeneral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_partiIndividual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_discapacidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_motivoSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_numCelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_dirDomicilio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_correoPersonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_instrucFormal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_añosExperiencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_comServicios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_oriDesComision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechComiDesde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_fechComiHasta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_nomPerContacEmergencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_numPerContacEmergencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_observaciones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Per_estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_CargoInstitucional.CargoInsti_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_CorreoIntitucional.CorreoInts_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_DireccionInstitucional.DirInsti_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_EstrcuturaUno.EstructuraUno_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_EstructuraDos.EstructuraDos_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_EstructuraProgramatica.EstrucProgra_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Grado.Grado_Per)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_GrupoEtnico.GrupoEtni_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_GrupoOcupacional.GrpOcupacional_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Inicial.inicial_NumArchivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_ModalidadLaboral.Per_modLaboral_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_ProcesoInterno.ProcesoInt_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Rmu.Rmu_estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Sede.Sede_nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_TelefonoIntitucional.TelfInst_estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tbl_Zona.Zona_nom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_Cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_priNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_segNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_priApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_segApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechDesde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechHasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_numContrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_partiGeneral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_partiIndividual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_discapacidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_motivoSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_numCelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_dirDomicilio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_correoPersonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_instrucFormal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_añosExperiencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_comServicios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_oriDesComision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechComiDesde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_fechComiHasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_nomPerContacEmergencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_numPerContacEmergencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_observaciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Per_estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_CargoInstitucional.CargoInsti_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_CorreoIntitucional.CorreoInts_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_DireccionInstitucional.DirInsti_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_EstrcuturaUno.EstructuraUno_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_EstructuraDos.EstructuraDos_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_EstructuraProgramatica.EstrucProgra_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Grado.Grado_Per)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_GrupoEtnico.GrupoEtni_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_GrupoOcupacional.GrpOcupacional_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Inicial.inicial_NumArchivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_ModalidadLaboral.Per_modLaboral_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_ProcesoInterno.ProcesoInt_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Rmu.Rmu_estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Sede.Sede_nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_TelefonoIntitucional.TelfInst_estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tbl_Zona.Zona_nom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Per_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Per_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Per_id })
+        </td>
+    </tr>
+}
+
+</table>
